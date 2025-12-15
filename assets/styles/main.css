@@ -1,0 +1,57 @@
+/* assets/styles/main.css - Diseño Coherente y Homogéneo */
+:root {
+    --color-primary: #0056b3; /* Azul para encabezados */
+    --color-text: #333;
+    --color-code-bg: #272822; /* Fondo para código */
+    --color-code-text: #f8f8f2;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-text);
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+nav a.active { /* 'You are here' Feeling */
+    background-color: #0ae92f;
+    border-radius: 5px;
+}
+pre { /* Formato de código */
+    background-color: var(--color-code-bg);
+    color: var(--color-code-text);
+    padding: 15px;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+.breadcrumb-nav { 
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+.breadcrumb-nav a { 
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.language-switcher {
+    text-align: right;
+    margin-bottom: 10px;
+}
