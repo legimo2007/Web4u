@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Essential Properties | Web4U</title>
+    <meta name="description" content="Examples and usage of CSS properties like Flexbox, Grid, and transitions.">
+    <meta name="author" content="IES La Marisma">
+    <link rel="stylesheet" href="../assets/styles/main.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <a href="index.html" title="Switch to the Spanish version">Versión en Español</a>
+            </div>
+            <h1>CSS: Modern Styles</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index-en.html" title="Go back to the main page">Home</a></li>
+                    <li><a href="../html/index-en.html" title="Go to the HTML section">HTML</a></li>
+                    <li><a href="index-en.html" class="active" title="You are in the CSS section">CSS</a></li>
+                    <li><a href="../svg/index-en.html" title="Go to the SVG section">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb-nav">
+            <p><a href="../index-en.html" title="Go back to Home">Web4U</a> &gt; CSS</p>
+        </nav>
+        
+        <h2>Essential Styling Properties</h2>
+
+        <p>
+            <a href="../assets/pdfs/css-en-content.pdf" target="_blank" 
+                title="Download the content of this CSS page in PDF format.">
+                [PDF] Download CSS Summary
+            </a>
+        </p>
+
+        <section style="border: 1px solid #ccc; padding: 15px; margin-bottom: 30px;">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#flex" title="Jump to the display: flex property">1. display: flex</a></li>
+                <li><a href="#grid" title="Jump to the display: grid property">2. display: grid</a></li>
+                <li><a href="#shadow" title="Jump to the box-shadow property">3. box-shadow</a></li>
+                <li><a href="#border" title="Jump to the border-radius property">4. border-radius</a></li>
+                <li><a href="#transition" title="Jump to the transition property">5. transition</a></li>
+            </ul>
+        </section>
+        
+        <section id="flex">
+            <h4>1. Property: display: flex</h4>
+            <p><strong>Use Case:</strong> Creates a flexible formatting context that aligns elements in a single dimension (row or column), ideal for navigation bars or simple alignment.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    padding: 10px;
+}
+            </code></pre>
+            <h5>Browser Output</h5>
+            <img src="../assets/images/css 1.png" alt="Visual result of the display: flex code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/cssref/css3_pr_flex.php" target="_blank" title="View the official Flexbox documentation at W3C">
+                Flexbox Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="grid">
+            <h4>2. Property: display: grid</h4>
+            <p><strong>Use Case:</strong> Allows the creation of complex layouts in two dimensions (rows and columns), ideal for the main page layout.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Three columns */
+    gap: 10px;
+}
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/css 2.png" alt="Visual result of the display: grid code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/cssref/pr_grid.php" target="_blank" title="View the official Grid documentation at W3C">
+                Grid Layout Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+
+        <section id="shadow">
+              <h4>3. Property: box-shadow</h4>
+              <p><strong>Use Case:</strong> Applies one or more shadows around an element's frame, giving it depth and highlighting the content (3D or elevation effect).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+.tarjeta {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/css 3.png" alt="Visual result of the box-shadow code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/cssref/css3_pr_text-shadow.php" target="_blank" title="View the official box-shadow documentation at W3C">
+                box-shadow Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="border">
+              <h4>4. Property: border-radius</h4>
+              <p><strong>Use Case:</strong> Allows rounding the corners of an element. It is essential for modern design of buttons, cards, and circular images.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+.boton {
+    border-radius: 8px;
+}
+.circular {
+    border-radius: 50%; /* Creates a perfect circle */
+}
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/css 4.png" alt="Visual result of the border-radius code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/cssref/css3_pr_border-bottom-right-radius.php" target="_blank" title="View the official border-radius documentation at W3C">
+                border-radius Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="transition">
+              <h4>5. Property: transition</h4>
+              <p><strong>Use Case:</strong> Allows changes in CSS properties to occur smoothly over a specified period, creating attractive and soft animations (e.g., a color change on hover).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+.enlace {
+    transition: background-color 0.3s ease-in-out;
+}
+.enlace:hover {
+    background-color: #f0f0f0;
+}
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/css 5.png" alt="Visual result of the transition code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/cssref/css3_pr_transform.php" target="_blank" title="View the official CSS transitions documentation at W3C">
+                transition Specification (W3C)
+            </a></p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025/26 IES La Marisma. Markup Languages Project.</p>
+        </div>
+    </footer>
+</body>
+</html>

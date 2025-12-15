@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Etiquetas Semánticas | Web4U</title>
+    <meta name="description" content="Ejemplos y uso de etiquetas HTML semánticas como article, section y figure.">
+    <meta name="author" content="IES La Marisma">
+    <link rel="stylesheet" href="../assets/styles/main.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <a href="index-en.html" title="Cambiar a la versión en Inglés">English Version</a>
+            </div>
+            <h1>HTML: Etiquetas Esenciales</h1>
+            <nav aria-label="Navegación Principal">
+                <ul>
+                    <li><a href="../index.html" title="Volver a la página principal">Home</a></li>
+                    <li><a href="index.html" class="active" title="Estás en la sección de HTML">HTML</a></li>
+                    <li><a href="../css/index.html" title="Ir a la sección de CSS">CSS</a></li>
+                    <li><a href="../svg/index.html" title="Ir a la sección de SVG">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb-nav">
+            <p><a href="../index.html" title="Volver al inicio">Web4U</a> &gt; HTML</p>
+        </nav>
+        
+        <h2>Recursos y Ejemplos de HTML5</h2>
+
+        <p>
+            <a href="../assets/pdfs/html-content.pdf" target="_blank" 
+               title="Descargar el contenido de esta página de HTML en formato PDF.">
+               [PDF] Descargar Resumen de HTML
+            </a>
+        </p>
+
+        <section style="border: 1px solid #ccc; padding: 15px; margin-bottom: 30px;">
+            <h3>Tabla de Contenidos</h3>
+            <ul>
+                <li><a href="#article" title="Saltar a la etiqueta article">1. &lt;article&gt;</a></li>
+                <li><a href="#section" title="Saltar a la etiqueta section">2. &lt;section&gt;</a></li>
+                <li><a href="#figure" title="Saltar a las etiquetas figure y figcaption">3. &lt;figure&gt; y &lt;figcaption&gt;</a></li>
+                <li><a href="#input" title="Saltar a input">4. &lt;input type="date"&gt;</a></li>
+                <li><a href="#summary" title="Saltar a details y summary">5. &lt;details&gt; y &lt;summary&gt;</a></li>
+            </ul>
+        </section>
+        
+        <section id="article">
+            <h4>1. Etiqueta: &lt;article&gt;</h4>
+            <p><strong>Caso de Uso:</strong> Contenido independiente (post de blog, comentario). Debe tener sentido si se extrae del contexto del sitio.</p>
+            
+            <h5>Código de Ejemplo</h5>
+            <pre><code>
+&lt;article class="post"&gt;
+    &lt;h2&gt;Nuevas Tendencias en Diseño Web&lt;/h2&gt;
+    &lt;p&gt;El uso de Flexbox y Grid sigue en aumento...&lt;/p&gt;
+    &lt;footer&gt;Publicado el 2025-01-01&lt;/footer&gt;
+&lt;/article&gt;
+            </code></pre>
+            <h5>Resultado en el Navegador</h5>
+            <img src="../assets/images/html 1.png" alt="Resultado visual del código article en el navegador." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>Documentación W3C</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_article.asp" target="_blank" 
+               title="Ver la documentación oficial de la etiqueta article en el W3C">
+               Especificación &lt;article&gt; (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="section">
+            <h4>2. Etiqueta: &lt;section&gt;</h4>
+            <p><strong>Caso de Uso:</strong> Agrupa contenido relacionado lógicamente dentro de un documento. Debe tener un encabezado propio.</p>
+            
+            <h5>Código de Ejemplo</h5>
+            <pre><code>
+&lt;section id="sobre-nosotros"&gt;
+    &lt;h2&gt;Sobre Nosotros&lt;/h2&gt;
+    &lt;p&gt;Somos una iniciativa dedicada a la educación web.&lt;/p&gt;
+&lt;/section&gt;
+            </code></pre>
+            <h5>Resultado en el Navegador </h5>
+            <img src="../assets/images/html 2.png" alt="Resultado visual del código section en el navegador." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>Documentación W3C</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank" title="Ver la documentación oficial de la etiqueta section en el W3C">
+               Especificación &lt;section&gt; (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+
+        <section id="figure">
+             <h4>3. Etiquetas: &lt;figure&gt; y &lt;figcaption&gt;</h4>
+             <p><strong>Caso de Uso:</strong> Se utiliza para marcar contenido que es referenciado desde el cuerpo principal, como fotos, diagramas o código, y su leyenda o título (`figcaption`).</p>
+            
+            <h5>Código de Ejemplo</h5>
+            <pre><code>
+&lt;figure&gt;
+    &lt;img src="mi-diagrama.png" alt="Diagrama de flujo"&gt;
+    &lt;figcaption&gt;Figura 1: Diagrama de flujo del sitio web.&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </code></pre>
+            <h5>Resultado en el Navegador (en el logo de la imagen estaria la imagen deseada)</h5>
+            <img src="../assets/images/html 3.png" alt="Resultado visual del código figure en el navegador." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>Documentación W3C</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_figure.asp" target="_blank" title="Ver la documentación oficial de la etiqueta figure en el W3C">
+               Especificación &lt;figure&gt; (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="input">
+             <h4>4. Etiqueta: &lt;input type="date"&gt;</h4>
+             <p><strong>Caso de Uso:</strong> Crea un campo de formulario que permite al usuario seleccionar una fecha con un selector visual nativo del navegador (calendario).</p>
+            
+            <h5>Código de Ejemplo</h5>
+            <pre><code>
+&lt;label for="fecha-reserva"&gt;Selecciona una fecha:&lt;/label&gt;
+&lt;input type="date" id="fecha-reserva" name="reserva"&gt;
+            </code></pre>
+            <h5>Resultado en el Navegador </h5>
+            <img src="../assets/images/html 4.png" alt="Resultado visual del código input type date en el navegador." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>Documentación W3C</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_details.asp" target="_blank" title="Ver la documentación oficial del W3C para input type date">
+               Especificación &lt;input type="date"&gt; (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="summary">
+             <h4>5. Etiquetas: &lt;details&gt; y &lt;summary&gt;</h4>
+             <p><strong>Caso de Uso:</strong> Permite crear un *widget* de divulgación interactivo donde el usuario puede abrir y cerrar contenido adicional (útil para Preguntas Frecuentes).</p>
+            
+            <h5>Código de Ejemplo</h5>
+            <pre><code>
+&lt;details&gt;
+    &lt;summary&gt;Ver más sobre la actividad&lt;/summary&gt;
+    &lt;p&gt;Esta actividad es obligatoria para el 1er trimestre.&lt;/p&gt;
+&lt;/details&gt;
+            </code></pre>
+            <h5>Resultado en el Navegador </h5>
+            <img src="../assets/images/html 5.png" alt="Resultado visual del código details y summary en el navegador." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>Documentación W3C</h5>
+            <p><a href="https://www.w3.org/TR/html52/interactive-elements.html#the-details-element" target="_blank" title="Ver la documentación oficial del W3C para details y summary">
+               Especificación &lt;details&gt; y &lt;summary&gt; (W3C)
+            </a></p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025/26 IES La Marisma. Proyecto de Lenguajes de Marcado.</p>
+        </div>
+    </footer>
+</body>
+</html>

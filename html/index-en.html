@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Semantic Tags | Web4U</title>
+    <meta name="description" content="Examples and usage of semantic HTML tags like article, section, and figure.">
+    <meta name="author" content="IES La Marisma">
+    <link rel="stylesheet" href="../assets/styles/main.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <a href="index.html" title="Switch to the Spanish version">Versión en Español</a>
+            </div>
+            <h1>HTML: Essential Tags</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index-en.html" title="Go back to the main page">Home</a></li>
+                    <li><a href="index-en.html" class="active" title="You are in the HTML section">HTML</a></li>
+                    <li><a href="../css/index-en.html" title="Go to the CSS section">CSS</a></li>
+                    <li><a href="../svg/index-en.html" title="Go to the SVG section">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb-nav">
+            <p><a href="../index-en.html" title="Go back to Home">Web4U</a> &gt; HTML</p>
+        </nav>
+        
+        <h2>HTML5 Resources and Examples</h2>
+
+        <p>
+            <a href="../assets/pdfs/html-en-content.pdf" target="_blank" 
+                title="Download the content of this HTML page in PDF format.">
+                [PDF] Download HTML Summary
+            </a>
+        </p>
+
+        <section style="border: 1px solid #ccc; padding: 15px; margin-bottom: 30px;">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#article" title="Jump to the article tag">1. &lt;article&gt;</a></li>
+                <li><a href="#section" title="Jump to the section tag">2. &lt;section&gt;</a></li>
+                <li><a href="#figure" title="Jump to figure and figcaption tags">3. &lt;figure&gt; y &lt;figcaption&gt;</a></li>
+                <li><a href="#input" title="Jump to input">4. &lt;input type="date"&gt;</a></li>
+                <li><a href="#summary" title="Jump to details and summary">5. &lt;details&gt; y &lt;summary&gt;</a></li>
+            </ul>
+        </section>
+        
+        <section id="article">
+            <h4>1. Tag: &lt;article&gt;</h4>
+            <p><strong>Use Case:</strong> Independent, self-contained content (blog post, comment). Should make sense if extracted from the site context.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;article class="post"&gt;
+    &lt;h2&gt;New Trends in Web Design&lt;/h2&gt;
+    &lt;p&gt;The use of Flexbox and Grid continues to increase...&lt;/p&gt;
+    &lt;footer&gt;Published on 2025-01-01&lt;/footer&gt;
+&lt;/article&gt;
+            </code></pre>
+            <h5>Browser Output</h5>
+            <img src="../assets/images/html 1.png" alt="Visual result of the article code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_article.asp" target="_blank" 
+                title="View the official documentation for the article tag (W3C)">
+                &lt;article&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="section">
+            <h4>2. Tag: &lt;section&gt;</h4>
+            <p><strong>Use Case:</strong> Groups logically related content within a document. It should generally have its own heading.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;section id="about-us"&gt;
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;We are an initiative dedicated to web education.&lt;/p&gt;
+&lt;/section&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/html 2.png" alt="Visual result of the section code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank" title="View the official documentation for the section tag (W3C)">
+                &lt;section&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+
+        <section id="figure">
+              <h4>3. Tags: &lt;figure&gt; and &lt;figcaption&gt;</h4>
+              <p><strong>Use Case:</strong> Used to mark content referenced from the main body, such as photos, diagrams, or code, and its caption or title (`figcaption`).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;figure&gt;
+    &lt;img src="my-diagram.png" alt="Flowchart Diagram"&gt;
+    &lt;figcaption&gt;Figure 1: Website Flowchart.&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </code></pre>
+            <h5>Browser Output (The desired image would be in the image logo)</h5>
+            <img src="../assets/images/html 3.png" alt="Visual result of the figure code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_figure.asp" target="_blank" title="View the official documentation for the figure tag (W3C)">
+                &lt;figure&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="input">
+              <h4>4. Tag: &lt;input type="date"&gt;</h4>
+              <p><strong>Use Case:</strong> Creates a form field that allows the user to select a date using a native browser visual selector (calendar).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;label for="reservation-date"&gt;Select a date:&lt;/label&gt;
+&lt;input type="date" id="reservation-date" name="reservation"&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/html 4.png" alt="Visual result of the input type date code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/tags/tag_details.asp" target="_blank" title="View the official documentation for input type date (W3C)">
+                &lt;input type="date"&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="summary">
+              <h4>5. Tags: &lt;details&gt; and &lt;summary&gt;</h4>
+              <p><strong>Use Case:</strong> Allows creating an interactive disclosure widget where the user can open and close additional content (useful for FAQs).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;details&gt;
+    &lt;summary&gt;See more about the activity&lt;/summary&gt;
+    &lt;p&gt;This activity is mandatory for the 1st trimester.&lt;/p&gt;
+&lt;/details&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/html 5.png" alt="Visual result of the details and summary code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3.org/TR/html52/interactive-elements.html#the-details-element" target="_blank" title="View the official documentation for details and summary (W3C)">
+                &lt;details&gt; and &lt;summary&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025/26 IES La Marisma. Markup Languages Project.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG - Shapes and Graphics | Web4U</title>
+    <meta name="description" content="Examples and usage of SVG elements like circles, rectangles, and paths.">
+    <meta name="author" content="IES La Marisma">
+    <link rel="stylesheet" href="../assets/styles/main.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="language-switcher">
+                <a href="index.html" title="Switch to the Spanish version">Versión en Español</a>
+            </div>
+            <h1>SVG: Vector Graphics</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index-en.html" title="Go back to the main page">Home</a></li>
+                    <li><a href="../html/index-en.html" title="Go to the HTML section">HTML</a></li>
+                    <li><a href="../css/index-en.html" title="Go to the CSS section">CSS</a></li>
+                    <li><a href="index-en.html" class="active" title="You are in the SVG section">SVG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumb-nav">
+            <p><a href="../index-en.html" title="Go back to Home">Web4U</a> &gt; SVG</p>
+        </nav>
+        
+        <h2>Basic SVG Elements</h2>
+
+        <p>
+            <a href="../assets/pdfs/svg-en-content.pdf" target="_blank" 
+                title="Download the content of this SVG page in PDF format.">
+                [PDF] Download SVG Summary
+            </a>
+        </p>
+
+        <section style="border: 1px solid #ccc; padding: 15px; margin-bottom: 30px;">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#circle" title="Jump to the circle tag">1. &lt;circle&gt;</a></li>
+                <li><a href="#rect" title="Jump to the rect tag">2. &lt;rect&gt;</a></li>
+                <li><a href="#line" title="Jump to the line tag">3. &lt;line&gt;</a></li>
+                <li><a href="#path" title="Jump to the path tag">4. &lt;path&gt;</a></li>
+                <li><a href="#g" title="Jump to the g tag">5. &lt;g&gt; (Grouping)</a></li>
+            </ul>
+        </section>
+        
+        <section id="circle">
+            <h4>1. Element: &lt;circle&gt;</h4>
+            <p><strong>Use Case:</strong> Draws a circle. Requires the center position (`cx`, `cy`) and the radius (`r`). It is one of the simplest SVG shapes.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="blue" stroke-width="3" fill="yellow" /&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/svg 1.png" alt="Visual result of the circle code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/graphics/svg_circle.asp" target="_blank" title="View the official circle documentation at W3C">
+                &lt;circle&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="rect">
+            <h4>2. Element: &lt;rect&gt;</h4>
+            <p><strong>Use Case:</strong> Draws a rectangle. Uses the top-left corner coordinates (`x`, `y`) plus the width (`width`) and height (`height`).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;svg width="200" height="100"&gt;
+    &lt;rect x="10" y="10" width="180" height="80" fill="#f0f0f0" stroke="black" /&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/svg 2.png" alt="Visual result of the rect code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/graphics/svg_rect.asp" target="_blank" title="View the official rect documentation at W3C">
+                &lt;rect&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+
+        <section id="line">
+              <h4>3. Element: &lt;line&gt;</h4>
+              <p><strong>Use Case:</strong> Draws a straight line. Requires the coordinates of the starting point (`x1`, `y1`) and the ending point (`x2`, `y2`).</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;line x1="10" y1="10" x2="90" y2="90" stroke="red" stroke-width="2" /&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/svg 3.png" alt="Visual result of the line code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/graphics/svg_line.asp#gsc.tab=0" target="_blank" title="View the official line documentation at W3C">
+                &lt;line&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="path">
+              <h4>4. Element: &lt;path&gt;</h4>
+              <p><strong>Use Case:</strong> It is the most powerful SVG element, used to draw complex shapes. It uses drawing commands (`d`) like *MoveTo*, *LineTo*, and Bézier curves.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;path d="M 10 10 L 90 10 L 50 90 Z" fill="green" /&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <h5>Browser Output</h5>
+            <img src="../assets/images/svg 4.png" alt="Visual result of the path code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/graphics/svg_path.asp#gsc.tab=0" target="_blank" title="View the official path documentation at W3C">
+                &lt;path&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+        <hr>
+        
+        <section id="g">
+              <h4>5. Element: &lt;g&gt; (Grouping)</h4>
+              <p><strong>Use Case:</strong> Used to group SVG elements. Attributes applied to the `<g>` element (like transformations or styles) apply to all its child elements. Ideal for moving or scaling entire groups.</p>
+            
+            <h5>Example Code</h5>
+            <pre><code>
+&lt;svg width="200" height="200"&gt;
+    &lt;g transform="translate(50, 50)" fill="purple"&gt;
+        &lt;circle cx="0" cy="0" r="10" /&gt;
+        &lt;rect x="20" y="-10" width="30" height="20" /&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+            </code></pre>
+            <h5>Browser Output </h5>
+            <img src="../assets/images/svg 5.png" alt="Visual result of the g code in the browser." style="max-width: 100%; border: 1px solid #ccc;">
+            
+            <h5>W3C Documentation</h5>
+            <p><a href="https://www.w3schools.com/graphics/svg_transformations.asp" target="_blank" title="View the official g documentation at W3C">
+                &lt;g&gt; Specification (W3C)
+            </a></p>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025/26 IES La Marisma. Markup Languages Project.</p>
+        </div>
+    </footer>
+</body>
+</html>
